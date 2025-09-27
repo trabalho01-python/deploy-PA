@@ -2,6 +2,28 @@
 
 {% block conteudo %}
 
-<h1>Essa é a minha página inicial</h1>
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="card shadow p-4 formulario1 border">
+        <div class="text-center mb-4">
+            <i class="bi bi-person-circle icone1"></i>
+            <h2 class="mb-4 text-center titulo1">Login</h2>
+        </div>
+        
+        <form method="post" action="{{url_for('index')}}">
+            
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <div class="mb-3">
+                <label for="senha" class="form-label">Senha</label>
+                <input type="senha" class="form-control" id="senha" name="senha">
+            </div>
+            <div class="text-center button1">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+    </div>
+</div>
 
 {% endblock %}
